@@ -1,0 +1,186 @@
+nav{
+    background: rgb(0, 47, 78);
+    padding: 15px;
+    margin-bottom: 0px;
+}
+.navop{
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+h1{
+    color: rgb(0, 64, 116);
+    font-family: 'Bangers', cursive;
+    font-size: 50px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+
+#score{
+    font-family: 'Akaya Telivigala', cursive;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.desc{
+    background-color: rgb(170, 181, 250);
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: 2px 2px 2px 2px;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/* .descin{
+    padding: 5px;
+} */
+button{
+    background-color: rgb(51, 51, 51);
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.ans{
+    font-family: 'Neuton', serif;
+    color: rgb(32, 0, 41);
+    font-size: 25px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.ques{
+    font-family: 'Neuton', serif;
+    color: rgb(32, 0, 41);
+    font-size: 30px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+#sub{
+    display: block;
+    font-size: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border-color: rgb(41, 41, 41);
+    background-color: rgb(51, 51, 51);
+    color: white;
+    margin-top: 10px;
+    
+}
+#sub:hover{
+    cursor: pointer;
+    border-width: 3px;
+    border-color: black;
+}
+body{
+    margin: 0px;
+    /* background: url("https://cdn.writermag.com/2019/03/question-marks-1024x682.jpg") repeat-y center center/cover; */
+    background-image: url("https://cdn.writermag.com/2019/03/question-marks-1024x682.jpg");
+    background-color: rgba(255, 255, 255, 0.781);
+    /* background-position: 100% 100%; */
+    background-size: cover; 
+    background-attachment: fixed;
+    background-blend-mode: lighten;
+    /* background-repeat: repeat-y; */
+    /* content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%; */
+    /* z-index: -1;
+    opacity: 0.3; */
+}
+#aboutimg{
+    height: 400px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+#helpimg{
+    height: 400px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+#contactimg{
+    height: 400px;
+    width: 700px;
+    margin-left: 20px;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    display: block;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+#aboutdesc{
+    background-color: rgb(0, 124, 62);
+    color: white;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+}
+#helpdesc{
+    background-color: rgb(0, 85, 124);
+    color: white;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+}
+#qbg{
+    background-color: rgb(202, 248, 234);
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+#contactdesc{
+    display: inline-block;
+    position: absolute;
+    /* margin-top: 10px; */
+    /* margin-left: 20px; */
+    padding: 40px;
+    font-size: 25px;
+    background-color: rgb(52, 0, 110);
+    color: white;
+    margin: 20px;
+    /* border-radius: 10px; */
+    /* border-width: 2px; */
+    /* border-style: solid; */
+    /* border-color: black; */
+}

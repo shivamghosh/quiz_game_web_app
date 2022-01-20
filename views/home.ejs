@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Bangers&family=Neuton&display=swap" rel="stylesheet">
+    <title>Home - Quiz Game</title>
+</head>
+<body>
+    <nav>
+        <div class='navop'><a href="/"> Home </a></div>
+        <div class='navop'><a href="/about"> About </a></div>
+        <div class='navop'><a href="/help"> Help </a></div>
+        <div class='navop'><a href="/contact"> Contact Us </a></div>
+    </nav>
+    <div id='bg'>
+    <h1><%=data.name%></h1>
+    <p id='score'><%=data.score%></p>
+    <% if(data.showreset=="Y"){%>
+    <button> <a href="/"> Reset </a></button>
+    <%}%>
+    <form action="/" method="POST" id='data'>
+        <div id='qbg'>
+        <% var i=0%>
+    <% data.question.forEach((item)=>{%>
+        <p class='ques'><%=i+1%>. <%=item.ques%></p>
+        <p class='ans'> <input type="radio" name="answer<%=i%>" value="<%=item.op1%>" required> <%=item.op1%></p> 
+        <p class='ans'> <input type="radio" name="answer<%=i%>" value="<%=item.op2%>"> <%=item.op2%></p> 
+        <p class='ans'> <input type="radio" name="answer<%=i%>" value="<%=item.op3%>"> <%=item.op3%></p>
+        <p class='ans'> <input type="radio" name="answer<%=i%>" value="<%=item.op4%>"> <%=item.op4%></p>
+        
+        <% if(data.iscorrect.length>0){%>
+        <div class='desc'>
+        <p class='descin ans'><%=data.iscorrect[i]%></p>
+        <%}%>
+        <% if(data.userres.length>0){%>
+        <p class='descin ans'>Your response: <%=data.userres[i]%></p>
+        <%}%>
+        <% if(data.correctans.length>0){if(data.userres[i]!=data.correctans[i]){%>
+        <!-- <% if(data.userres[i]!=data.correctans[i]){%> -->
+        <p class='descin ans'>Correct answer: <%=data.correctans[i]%></p>
+        </div>
+        <!-- <%}%> -->
+        <%}else{%>
+        </div>
+        <%}%>
+        <%}%>
+        <%i=i+1%>
+        
+    <%});%>
+    </div>
+    <% if(data.showsubmit=="Y"){ %>
+    <input type="submit" id="sub">
+    <%}%>
+    </form>
+    
+</div>
+</body>
+</html>
