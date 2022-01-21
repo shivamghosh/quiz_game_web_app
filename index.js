@@ -37,7 +37,7 @@ async function getData()
     // let ans=["Option 1","Option 2","Option 2"];
     let score='';
     let greet='Welcome Guest, Choose one option to answer each question. Good luck :)';
-    var data={name:greet,question:ques,score:score,showsubmit:"Y",iscorrect:[],userres:[],correctans:[]};
+    var data={name:greet,question:ques,score:score,showsubmit:"Y",iscorrect:[],userres:[],correctans:[],responses:[]};
     app.get('/', (req, res)=>{
     res.render('home', {data:data});
      });
@@ -68,7 +68,7 @@ async function getData()
 
         }
         score="Your score is: "+sc.toString()+" out of "+ans.length.toString();
-        var data={question:ques,score:score,showreset:"Y",iscorrect:iscorrect,userres:userres,correctans:correctans,showsubmit:"N"};
+        var data={question:ques,score:score,showreset:"Y",iscorrect:iscorrect,userres:userres,correctans:correctans,showsubmit:"N",responses:responses};
         res.render('home', {data:data});
     })
 }

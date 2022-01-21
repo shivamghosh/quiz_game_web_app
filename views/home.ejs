@@ -28,11 +28,30 @@
         <% var i=0%>
     <% data.question.forEach((item)=>{%>
         <p class='ques'><%=i+1%>. <%=item.ques%></p>
+        <% if(data.responses.length==0){%>
         <p class='ans'> <input type="radio" name="answer<%=i%>" value="<%=item.op1%>" required> <%=item.op1%></p> 
         <p class='ans'> <input type="radio" name="answer<%=i%>" value="<%=item.op2%>"> <%=item.op2%></p> 
         <p class='ans'> <input type="radio" name="answer<%=i%>" value="<%=item.op3%>"> <%=item.op3%></p>
         <p class='ans'> <input type="radio" name="answer<%=i%>" value="<%=item.op4%>"> <%=item.op4%></p>
-        
+        <%}else{if(data.responses[i]==item.op1){%>
+        <p class='ans'> <input type="radio" name="answer<%=i%>" value="<%=item.op1%>" required checked> <%=item.op1%></p> 
+        <%}else{%>
+        <p class='ans'> <input type="radio" name="answer<%=i%>" value="<%=item.op1%>" required> <%=item.op1%></p>
+        <%}if(data.responses[i]==item.op2){%> 
+        <p class='ans'> <input type="radio" name="answer<%=i%>" value="<%=item.op2%>" checked> <%=item.op2%></p>
+        <%}else{%> 
+        <p class='ans'> <input type="radio" name="answer<%=i%>" value="<%=item.op2%>"> <%=item.op2%></p>
+        <%}if(data.responses[i]==item.op3){%> 
+        <p class='ans'> <input type="radio" name="answer<%=i%>" value="<%=item.op3%>" checked> <%=item.op3%></p>
+        <%}else{%> 
+        <p class='ans'> <input type="radio" name="answer<%=i%>" value="<%=item.op3%>"> <%=item.op3%></p>
+        <%}if(data.responses[i]==item.op4){%>
+        <p class='ans'> <input type="radio" name="answer<%=i%>" value="<%=item.op4%>" checked> <%=item.op4%></p>
+        <%}else{%>
+        <p class='ans'> <input type="radio" name="answer<%=i%>" value="<%=item.op4%>"> <%=item.op4%></p>
+        <%}%>
+        <%}%>
+
         <% if(data.iscorrect.length>0){%>
         <div class='desc'>
         <p class='descin ans'><%=data.iscorrect[i]%></p>
